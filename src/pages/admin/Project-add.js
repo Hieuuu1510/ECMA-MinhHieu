@@ -6,7 +6,9 @@ import { useEffect, router } from "../../lib"
 const AdminProjectAddPage = () => {
   useEffect(() => {
     const productName = document.getElementById('product-name');
-    const productDescribe = document.getElementById('product-describe');
+    const productDate = document.getElementById('product-date');
+    const productLanguage = document.getElementById('product-language');
+    const productLink = document.getElementById('product-link');
     const productImages = document.getElementById('product-images');
     const formAdd = document.getElementById('form-add');
 
@@ -17,7 +19,9 @@ const AdminProjectAddPage = () => {
 
         const project = {
           name: productName.value,
-          describe: productDescribe.value,
+          date: productDate.value,
+          language: productLanguage.value,
+          Link: productLink.value,
           gallerys: urls,
         }
 
@@ -68,12 +72,20 @@ const AdminProjectAddPage = () => {
         <h1>Thêm sản phẩm</h1>
         <form id="form-add">
         <div class="form-group mb-3">
-          <label for="">Tên sản phẩm</label>
+          <label for="">Tên dự án</label>
           <input type="text" name="" id="product-name" class="form-control">
         </div>
         <div class="form-group mb-3">
-            <label for="">Mô tả sản phẩm</label>
-            <input type="text" name="" id="product-describe" class="form-control">
+            <label for="">Ngày hoàn thành</label>
+            <input type="date" name="" id="product-date" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="">Ngôn ngữ lập trình</label>
+            <input type="text" name="" id="product-language" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="">link github</label>
+            <input type="text" name="" id="product-link" class="form-control">
         </div>
         <div class="form-group mb-3">
             <label for="">Ảnh sản phẩm</label>
@@ -81,7 +93,11 @@ const AdminProjectAddPage = () => {
         </div>
         <div class="form-group">
           <button class="btn btn-primary">Thêm sản phẩm</button>
+          <button  height="38px" class="btn" style="border: 1px solid whitesmoke; border-radius: 7px; padding: 5px; background-color: brown; width:138px">
+            <a data-navigo style="text-decoration: none; color: white; padding: 5px;" href="/admin/projects/">show Project</a>
+          </button>
         </div>
+        
         </form>
     </div>`
   )

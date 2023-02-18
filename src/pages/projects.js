@@ -66,7 +66,9 @@ const ProjectsPage = () => {
                             <div class="data">
                                 <img src="${item.gallerys}" alt="">
                                 <h2>${item.name}</h2>
-                                <p>Cao Minh Chu (với tư cách Phó Giám đốc Sở Y tế TP Cần Thơ, đồng thời là Trưởng Ban Quản lý dự án) chỉ đạo cấp dưới tiếp nhận các báo giá, thông số kỹ thuật của thiết bị y tế do Công ty NSJ cung cấp. Từ đó, những người này làm báo cáo xin vốn, lập dự toán</p>
+                                <span><i class="fa-regular fa-calendar-days icon"></i> ${item.date}</span>
+                                <p>-${item.language}-</p>
+                                <button><a target="_blank" href="${item.Link}">Link github</a></button>
                             </div>
                         `
                     ).join("")

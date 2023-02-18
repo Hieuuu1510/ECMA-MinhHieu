@@ -46,9 +46,10 @@ const AdminProjectsPage = () => {
             <thead>
                 <tr>
                     <th>STT</th>
-                    <th>Tên sản phẩm</th>
-                    <th>Mô tả sản phẩm</th>
-                    <th>Ảnh sản phẩm</th>
+                    <th>Tên dự án</th>
+                    <th>Ngày hoàn thành</th>
+                    <th>Ngôn ngữ lập trình</th>
+                    <th>Linh github</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -57,7 +58,9 @@ const AdminProjectsPage = () => {
                     <tr>
                             <td>${index + 1}</td>
                             <td>${project.name}</td>
-                            <td>${project.price}</td>
+                            <td>${project.date}</td>
+                            <td>${project.language}</td>
+                            <td>${project.Link}</td>
                             <td><img src="${project.gallerys}" alt="" width="150px"></td>
                             <td width="150">
                                 <button data-id="${project.id}" class="btn btn-danger btn-remove">Xóa</button> 
