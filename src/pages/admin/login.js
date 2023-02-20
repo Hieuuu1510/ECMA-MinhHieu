@@ -43,10 +43,10 @@ const login = () => {
   <body>
       <div class="container">
           <h1>Login</h1>
-          <form id="form-add">
-              <label for="username">Email</label>
+          <form class="form" id="form-add">
+              <label class="label" for="username">Email</label>
               <input class="inputLogin" type="email" id="username" name="username" placeholder="Enter email">
-              <label for="password">Password</label>
+              <label class="label" for="password">Password</label>
               <input class="inputLogin" type="password" id="password" name="password" placeholder="Enter password">
               <button class="buttonLogin" value="Login" id="login">Login</button>
           </form>

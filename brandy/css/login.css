@@ -17,12 +17,12 @@ h1 {
 	text-align: center;
 }
 
-form {
+.form {
 	display: flex;
 	flex-direction: column;
 }
 
-label {
+.label {
 	margin-bottom: 10px;
 }
 
