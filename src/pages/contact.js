@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+
 import { useEffect } from "../lib";
 import { postContact } from "../api/contact";
 const ContactPage = () => {

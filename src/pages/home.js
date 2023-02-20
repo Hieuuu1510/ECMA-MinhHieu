@@ -1,6 +1,4 @@
 
-import Header from "../components/Header";
-import nav from "../components/Nav";
 
 const HomePage = () => {
     return /*html*/ `

@@ -1,5 +1,4 @@
-import Header from "../components/Header";
-import ProjectList from "../components/projectList";
+
 import { projects} from '../data';
 import { getProjects } from "../api/project";
 import { useState, useEffect } from "../lib";
