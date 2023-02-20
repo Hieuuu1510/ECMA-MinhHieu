@@ -41,7 +41,7 @@ nav ul li a:hover {
     color: rgb(179, 30, 30);
 }
 .banner {
-    background-image: url("../images/testimonial_bg.jpg");
+    background-image: url("../../images/testimonial_bg.jpg");
     height: 400px;
     text-align: center;
 }
