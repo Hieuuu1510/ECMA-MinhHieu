@@ -64,7 +64,7 @@ const AdminProjectsPage = () => {
                             <td><img src="${project.gallerys}" alt="" width="150px"></td>
                             <td width="150">
                                 <button data-id="${project.id}" class="btn btn-danger btn-remove">Xóa</button> 
-                                <button class="btn btn-danger btn-update"><a style="text-decoration: none; color: white;" href="/admin/projects/${project.id}/edit">Sửa</a></button>
+                                <button class="btn btn-danger btn-update"><a style="text-decoration: none; color: white;" href="#/admin/projects/${project.id}/edit">Sửa</a></button>
                             </td>
                         </tr>
                 `).join("")

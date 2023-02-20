@@ -49,7 +49,7 @@ const AdminUser = () => {
                         <td>${item.pass}</td>
                         <td width="150">
                             <button data-id="${item.id}" class="btn btn-danger btn-remove">Xóa</button> 
-                            <button class="btn btn-danger btn-update"><a style="text-decoration: none; color: white;" href="/admin/user/${item.id}/edit">Sửa</a></button>
+                            <button class="btn btn-danger btn-update"><a style="text-decoration: none; color: white;" href="#/admin/user/${item.id}/edit">Sửa</a></button>
                         </td>
                     </tr>
             `
