@@ -1,6 +1,14 @@
+import { useEffect, useState } from "../lib";
 
 
 const HomePage = () => {
+    const [img, setImg] = useState([]);
+    useEffect(() => {
+        fetch("https://dj0r17-8080.preview.csb.app/api/images")
+        .then((item) => item.json())
+        .then((item) => setImg(item))
+        .catch(() => console.log("list ảnh thất bại"))
+    }, [])
     return /*html*/ `
         <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +55,10 @@ const HomePage = () => {
             </div>
             <div class="about-me">
                 <div class="anh">
-                    <img src="images/chanh.jpg" alt="" width="350" style="border-radius: 15px;">
+                ${img.map((img) => 
+                    `<img src="${img.image}" width="340" height="312px" style="border-radius: 15px;">`
+                    )}
+                    
                 </div>
                 <div class="text-profile1">
                     <h2>Một chút về tôi</h2>

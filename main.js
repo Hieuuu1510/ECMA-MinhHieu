@@ -25,6 +25,7 @@ import login from "./src/pages/admin/login";
 import AdminUser from "./src/pages/admin/list-user";
 import AdminUserAdd from "./src/pages/admin/add-user";
 import AdminUserEdit from "./src/pages/admin/edit-user";
+import add from "./src/pages/add";
 
 const app = document.getElementById('app');
 
@@ -51,6 +52,7 @@ router.on("/admin/login/", () => render(login, app))
 router.on("/admin/user/", () => render(AdminUser, app))
 router.on("/admin/user/add", () => render(AdminUserAdd, app))
 router.on("/admin/user/:userId/edit", ({ data}) => render(() => AdminUserEdit(data), app));
-
+// quản lí add
+router.on("/add", () => render(add, app));
 router.notFound(() => render(NotFoundPage, app));
 router.resolve();
