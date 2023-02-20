@@ -47,9 +47,9 @@ const ContactPage = () => {
                 <nav>
                     <ul>
                         <li><a data-navigo href="/">Home</a></li>
-                        <li><a data-navigo href="/project">Project</a></li>
-                        <li><a data-navigo href="/contact">Contact</a></li>
-                        <li><a data-navigo href="/admin/login"><i class="fa-solid fa-gears"></i></a></li>
+                        <li><a data-navigo href="/#project">Project</a></li>
+                        <li><a data-navigo href="/#contact">Contact</a></li>
+                        <li><a data-navigo href="#/admin/login"><i class="fa-solid fa-gears"></i></a></li>
                     </ul>
                 </nav>
             </header>
