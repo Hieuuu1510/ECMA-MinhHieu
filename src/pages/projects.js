@@ -67,7 +67,7 @@ const ProjectsPage = () => {
                                 <h2>${item.name}</h2>
                                 <span><i class="fa-regular fa-calendar-days icon"></i> ${item.date}</span>
                                 <p>${item.language}</p>
-                                <button target="_blank"><a target="_blank" href="${item.Link}">Link github</a></button>
+                                <button><a target="_blank" href="${item.Link}">Link github</a></button>
                             </div>
                         `
                     ).join("")
