@@ -45,10 +45,10 @@ const login = () => {
           <h1>Login</h1>
           <form id="form-add">
               <label for="username">Email</label>
-              <input type="email" id="username" name="username" placeholder="Enter email">
+              <input class="inputLogin" type="email" id="username" name="username" placeholder="Enter email">
               <label for="password">Password</label>
-              <input type="password" id="password" name="password" placeholder="Enter password">
-              <button value="Login" id="login">Login</button>
+              <input class="inputLogin" type="password" id="password" name="password" placeholder="Enter password">
+              <button class="buttonLogin" value="Login" id="login">Login</button>
           </form>
       </div>
   </body>
