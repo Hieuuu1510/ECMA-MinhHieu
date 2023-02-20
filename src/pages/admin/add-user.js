@@ -43,7 +43,7 @@ const AdminUserAdd = () => {
                 <div class="form-group">
                 <button class="btn btn-primary">Thêm User</button>
                 <button  height="38px" class="btn" style="border: 1px solid whitesmoke; border-radius: 7px; padding: 5px; background-color: brown; width:138px">
-                    <a data-navigo style="text-decoration: none; color: white; padding: 5px;" href="/admin/user/">show User</a>
+                    <a data-navigo style="text-decoration: none; color: white; padding: 5px;" href="#/admin/user/">show User</a>
                 </button>
                 </div>
             

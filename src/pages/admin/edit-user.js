@@ -24,7 +24,7 @@ const AdminUserEdit = ({ userId}) => {
                 email: productEmail.value,
                 pass: productPass.value,
             }
-            editUser(newUser).then(() => router.navigate("/admin/user"))
+            editUser(newUser).then(() => router.navigate("#/admin/user"))
                             .catch(() => console.log("Edit thất bại"))
         })
     })
