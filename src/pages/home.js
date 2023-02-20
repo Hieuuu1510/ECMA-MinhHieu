@@ -43,7 +43,7 @@ const HomePage = () => {
         <div class="about">
             <div class="about-text">
                 <p>About me</p>
-                <img src="././brandy/images/shape.png" alt="">
+                <img src=".././brandy/images/shape.png" alt="">
             </div>
             <div class="about-me">
                 <div class="anh">
