@@ -52,11 +52,11 @@ const ProjectsPage = () => {
             <div class="banner">
                 <p>Tôi làm Web Developer</p>
                 <span><a target="_blank" href=""><> My resume <></a></span>
-                <img src="././brandy/images/shape.png" alt="">
+                <img src="././images/shape.png" alt="">
             </div>
             <div class="project-title">
                 <h2>Project</h2>
-                <img src="././brandy/images/shape.png" alt="">
+                <img src="././images/shape.png" alt="">
             </div>
             <div class="project">
                 ${
