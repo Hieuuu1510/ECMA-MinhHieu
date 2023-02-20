@@ -38,16 +38,16 @@ const HomePage = () => {
             <p>Tôi làm Web Developer</p>
             <span><a target="_blank" href=""><> My resume <></a></span>
             <br>
-            <img src="../brandy/images/shape.png" alt="" >
+            <img src="././brandy/images/shape.png" alt="" >
         </div>
         <div class="about">
             <div class="about-text">
                 <p>About me</p>
-                <img src="../brandy/images/shape.png" alt="">
+                <img src="././brandy/images/shape.png" alt="">
             </div>
             <div class="about-me">
                 <div class="anh">
-                    <img src="../brandy/images/chanh.jpg" alt="" width="350" style="border-radius: 15px;">
+                    <img src="././brandy/images/chanh.jpg" alt="" width="350" style="border-radius: 15px;">
                 </div>
                 <div class="text-profile1">
                     <h2>Một chút về tôi</h2>
