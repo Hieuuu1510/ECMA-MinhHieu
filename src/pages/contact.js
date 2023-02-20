@@ -65,7 +65,7 @@ const ContactPage = () => {
                         <img src="././brandy/images/shape.png" alt="">
                     </div>
                     <div class="container">
-                        <form id="form-add">
+                        <form id="form-add" class="form-add">
                             <div class="form-left">
                                 <label for="fname"> Name</label>
                                 <input type="text" id="name" class="input" name="firstname" placeholder=" &ensp;Your name.." ><br>

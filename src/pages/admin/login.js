@@ -41,7 +41,7 @@ const login = () => {
       <link rel="stylesheet" href="./brandy/css/login.css">
   </head>
   <body>
-      <div class="container">
+      <div class="container form-login">
           <h1>Login</h1>
           <form class="form" id="form-add">
               <label class="label" for="username">Email</label>

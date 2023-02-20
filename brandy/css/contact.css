@@ -86,7 +86,7 @@ nav ul li a:hover {
 .text-contact img {
     margin-left: 430px;
 }
-form {
+.form-add {
     padding-top: 50px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
