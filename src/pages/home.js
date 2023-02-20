@@ -56,7 +56,7 @@ const HomePage = () => {
             <div class="about-me">
                 <div class="anh">
                 ${img.map((img) => 
-                    `<img src="${img.image}" width="340" height="312px" style="border-radius: 15px;">`
+                    `<img src="${img.image}" width="200" height="712" style="border-radius: 15px;">`
                     )}
                     
                 </div>

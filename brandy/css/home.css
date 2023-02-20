@@ -87,8 +87,13 @@ nav ul li a:hover {
     grid-template-columns: repeat(3,1fr);
     margin-left: 300px;
 }
-.about-me anh{
+.anh{
     margin-right: 30px;
+    
+}
+.anh img {
+    width: 350px;
+    height: 320px;
 }
 .about-me anh img {
     border-radius: 6px;
