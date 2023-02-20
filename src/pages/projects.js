@@ -44,15 +44,16 @@ const ProjectsPage = () => {
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/project">Project</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                        <li><a href="/admin/projects"><i class="fa-solid fa-gears"></i></a></li>
+                        <li><a data-navigo href="/">Home</a></li>
+                        <li><a data-navigo href="/project">Project</a></li>
+                        <li><a data-navigo href="/contact">Contact</a></li>
+                        <li><a data-navigo href="/admin/login"><i class="fa-solid fa-gears"></i></a></li>
                     </ul>
                 </nav>
             </header>
             <div class="banner">
                 <p>Tôi làm Web Developer</p>
+                <span><a target="_blank" href=""><> My resume <></a></span>
                 <img src="././brandy/images/shape.png" alt="">
             </div>
             <div class="project-title">
@@ -67,8 +68,8 @@ const ProjectsPage = () => {
                                 <img src="${item.gallerys}" alt="">
                                 <h2>${item.name}</h2>
                                 <span><i class="fa-regular fa-calendar-days icon"></i> ${item.date}</span>
-                                <p>-${item.language}-</p>
-                                <button><a target="_blank" href="${item.Link}">Link github</a></button>
+                                <p>${item.language}</p>
+                                <button target="_blank" href="${item.Link}><a target="_blank" href="${item.Link}">Link github</a></button>
                             </div>
                         `
                     ).join("")

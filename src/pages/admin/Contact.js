@@ -46,7 +46,7 @@ const adminContactPage = () => {
                     <td>${project.email}</td>
                     <td>${project.textarea}</td>
                     <td width="150">
-                        <button data-id="${project.id}" class="btn btn-danger btn-remove">Xóa</button> 
+                        <button data-id="${project.id}" class="btn btn-danger btn-remove" >Xóa</button> 
                     </td>
                 </tr>
             `).join("")}
@@ -55,6 +55,8 @@ const adminContactPage = () => {
     </table>
     <button style="border: 1px solid whitesmoke; border-radius: 7px; padding: 5px; background-color: brown;">
         <a data-navigo style="text-decoration: none; color: white; padding: 5px;" href="/admin/projects/">show Project</a>
+    </button><button style="border: 1px solid whitesmoke; border-radius: 7px; padding: 5px; background-color: brown;">
+        <a data-navigo style="text-decoration: none; color: white; padding: 5px;" href="/admin/user/">show User</a>
     </button>
 </div>`
   )

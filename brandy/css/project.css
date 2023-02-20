@@ -55,7 +55,19 @@ nav ul li a:hover {
     
 }
 .banner img {
+    margin-top: 10px;
     margin-left: 900px;
+}
+.banner span {
+    padding: 40px;
+    margin-bottom: 10px;
+}
+.banner span a {
+    text-decoration: none;
+    color: black;
+    text-shadow: 1px 1px 0px wheat;
+    margin-left: -30px;
+    
 }
 .project-title {
     text-align: center;
@@ -78,6 +90,7 @@ nav ul li a:hover {
 }
 .data {
     margin-left: 40px;
+    margin-bottom: 20px;
 }
 .data img {
     width: 400px;
@@ -96,6 +109,8 @@ nav ul li a:hover {
     width: 120px;
     border: 1px solid rgb(236, 230, 230);
     text-align: center;
+    border-radius: 8px;
+    margin-top: 10px;
 }
 .data span {
     margin-left: 50px;
@@ -105,9 +120,25 @@ nav ul li a:hover {
 .data span icon {
     margin-bottom: 10px;
 }
+.data p:hover {
+    background-color: thistle;
+}
 .data button {
     margin-left: 50px;
     width: 400px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+.data button a {
+    text-decoration: none;
+    color: black;
+}
+.data button a:hover {
+    color: white;
+}
+.data button:hover{
+    color: white;
+    background-color: thistle;
 }
 footer {
     background-color: #f3f3f3;
@@ -128,9 +159,6 @@ footer {
     margin-left: 10px;
     width: 20px;
     height: 40px;
-}
-.ig {
-
 }
 .lienKet {
     color: 133, 94, 24;
