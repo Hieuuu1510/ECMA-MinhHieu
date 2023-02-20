@@ -47,7 +47,7 @@ const HomePage = () => {
             </div>
             <div class="about-me">
                 <div class="anh">
-                    <img src="images/chanh.jpg" alt="" width="350" style="border-radius: 15px;">
+                    <img src="../../images/chanh.jpg" alt="" width="350" style="border-radius: 15px;">
                 </div>
                 <div class="text-profile1">
                     <h2>Một chút về tôi</h2>
