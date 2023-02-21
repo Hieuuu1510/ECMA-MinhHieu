@@ -51,7 +51,7 @@ const ProjectsPage = () => {
             </header>
             <div class="banner">
                 <p>Tôi làm Web Developer</p>
-                <span><a target="_blank" href=""><> My resume <></a></span>
+                <span><a target="_blank" href="https://drive.google.com/file/d/15VSx_F663ImKFH1UYHgn8K9_kke0t2RP/view?usp=sharing"><> My resume <></a></span>
                 <img src="././images/shape.png" alt="">
             </div>
             <div class="project-title">

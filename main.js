@@ -54,5 +54,6 @@ router.on("/admin/user/add", () => render(AdminUserAdd, app))
 router.on("/admin/user/:userId/edit", ({ data}) => render(() => AdminUserEdit(data), app));
 // quản lí add
 router.on("/add", () => render(add, app));
+
 router.notFound(() => render(NotFoundPage, app));
 router.resolve();
