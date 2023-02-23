@@ -68,7 +68,7 @@ const ProjectsPage = () => {
                     project.map((item) => 
                         `
                             <div class="data">
-                            <a href="/project/${item.id}">
+                            <a href="#/project/${item.id}">
                                 <img src="${item.gallerys}" alt="">
                                 <h2>${item.name}</h2>
                                 <span><i class="fa-regular fa-calendar-days icon"></i> ${item.date}</span>
