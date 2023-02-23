@@ -1,13 +1,18 @@
+import { getCvs } from "../api/cv";
+import { getProFiles } from "../api/proFile";
 import { useEffect, useState } from "../lib";
 
 
 const HomePage = () => {
-    const [img, setImg] = useState([]);
+    const [profile, setProfile] = useState([]);
+    const [cv, setCv] = useState([]);
     useEffect(() => {
-        fetch("https://dj0r17-8080.preview.csb.app/api/images")
-        .then((item) => item.json())
-        .then((item) => setImg(item))
-        .catch(() => console.log("list ảnh thất bại"))
+        getCvs().then(({ data }) => setCv(data))
+            .catch(() => console.log("list link cv thất bại"))
+
+
+        getProFiles().then(({ data}) => setProfile(data))
+                    .catch(() => console.log("list profile thất bại"))
     }, [])
     return /*html*/ `
         <!DOCTYPE html>
@@ -44,7 +49,10 @@ const HomePage = () => {
         </header>
         <div class="banner">
             <p>Tôi làm Web Developer</p>
-            <span><a target="_blank" href="https://drive.google.com/file/d/15VSx_F663ImKFH1UYHgn8K9_kke0t2RP/view?usp=sharing"><> My resume <></a></span>
+            ${cv.map((item) => `
+                <span><a target="_blank" href="${item.link}"><> My resume <></a></span>
+            `).join("")}
+            
             <br>
             <img src="././images/shape.png" alt="" >
         </div>
@@ -54,43 +62,31 @@ const HomePage = () => {
                 <img src=".././images/shape.png" alt="">
             </div>
             <div class="about-me">
+                ${profile.map((item) => `
                 <div class="anh">
-                ${img.map((img) => 
-                    `<img src="${img.image}" width="200" height="712" style="border-radius: 15px;">`
-                    )}
-                    
-                </div>
-                <div class="text-profile1">
-                    <h2>Một chút về tôi</h2>
-                    <p>Hiện tại, mình đang là sinh viên kì 5 tại trường FPT Polytechnic. Mình bắt đầu học lập trình từ
-                    tháng 8 năm ngoái và phần lớn thời gian trong ngày mình đều ngồi học code. Ngoài việc học tập trên trường thì mình thường xuyên
-                    học thêm trên w3school và trên các kênh Youtube như evondev, easy frontend, ...</p>
-                </div>
-                <div class="text-profile2">
-                    <h2>Thông tin cơ bản</h2>
-                    <p>
-                        Học vấn:  FPT Polytechnic<br>
-                        Email:  hieutmph20715@fpt.edu.vn<br>
-                        Website: https://ecma-minh-hieu.vercel.app/<br>
-                        Điện thoại:  0862069563<br>
-                        Địa chỉ:  Lý Nhân - Hà Nam<br>
-                        Nghề nghiệp:  Web developer<br>
-                        <tr>
-                            <td></td>
-                        </tr>
-
-                    </p>
-                </div>
+                <img src="${item.image}" width="200" height="712" style="border-radius: 15px;">
+            </div>
+            <div class="text-profile1">
+                <h2>Một chút về tôi</h2>
+                <p>${item.describe}</p>
+            </div>
+            <div class="text-profile2">
+                <h2>Thông tin cơ bản</h2>
+                <p>
+                    Học vấn:  ${item.hocVan}<br>
+                    Email:  ${item.email}<br>
+                    Website: ${item.vercel}<br>
+                    Điện thoại:  ${item.Phone}<br>
+                    Địa chỉ:  ${item.address}<br>
+                    Nghề nghiệp:  ${item.job}<br>
+                </p>
+            </div>
+                `)}  
             </div>
         </div>
         <footer>
             <div class="logo-footer">
                 <p>Minh <b>Hiếu</b></p>
-            </div>
-            <div class="lienKet">
-                <p>FOLLOW ME ON HERE</p>
-               <a target="_blank" href="https://www.instagram.com/_mink.hyeu/"> <i class="fa-brands fa-instagram ig"></i> </a>
-               <a target="_blank" href="https://www.facebook.com/profile.php?id=100052403615266">  <i class="fa-brands fa-facebook fb"></i> </a>
             </div>
             <div class="text-footer">
                 <p>Đằng sau 1 lập trình viên thành công là một người bạn gái... <b>không tồn tại</b> .</p>

@@ -1,11 +1,11 @@
-
+import { getCvs } from "../api/cv";
 import { getProjects } from "../api/project";
 import { useState, useEffect } from "../lib";
 
 
 const ProjectsPage = () => {
     const [project, setProject] = useState([]);
-
+    const [ cv, setCv] = useState([]);
     useEffect(() => {
         // fetch("http://localhost:3000/projectData")
         // .then((hehe) => hehe.json())
@@ -13,6 +13,9 @@ const ProjectsPage = () => {
         // .catch(() => console.log("sai"))
         getProjects().then(({ data}) => setProject(data))
                     .catch(() => console.log("list thất bại"))
+
+        getCvs().then(({ data}) => setCv(data))
+                .catch(() => console.log("list link cv thất bại"))
 
     },[]);
     console.log(project)
@@ -51,7 +54,9 @@ const ProjectsPage = () => {
             </header>
             <div class="banner">
                 <p>Tôi làm Web Developer</p>
-                <span><a target="_blank" href="https://drive.google.com/file/d/15VSx_F663ImKFH1UYHgn8K9_kke0t2RP/view?usp=sharing"><> My resume <></a></span>
+                ${cv.map((item) => `
+                    <span><a target="_blank" href="${item.link}"><> My resume <></a></span>
+                 `).join("")}
                 <img src="././images/shape.png" alt="">
             </div>
             <div class="project-title">
@@ -63,12 +68,15 @@ const ProjectsPage = () => {
                     project.map((item) => 
                         `
                             <div class="data">
+                            <a href="/project/${item.id}">
                                 <img src="${item.gallerys}" alt="">
                                 <h2>${item.name}</h2>
                                 <span><i class="fa-regular fa-calendar-days icon"></i> ${item.date}</span>
                                 <p>${item.language}</p>
+                            </a>
                                 <button><a target="_blank" href="${item.Link}">Link github</a></button>
                             </div>
+                        
                         `
                     ).join("")
                 }
@@ -77,11 +85,6 @@ const ProjectsPage = () => {
             <footer>
                 <div class="logo-footer">
                     <p>Minh <b>Hiếu</b></p>
-                </div>
-                <div class="lienKet">
-                    <p>FOLLOW ME ON HERE</p>
-                   <a target="_blank" href="https://www.instagram.com/_mink.hyeu/"> <i class="fa-brands fa-instagram ig"></i> </a>
-                   <a target="_blank" href="https://www.facebook.com/profile.php?id=100052403615266">  <i class="fa-brands fa-facebook fb"></i> </a>
                 </div>
                 <div class="text-footer">
                     <p>Đằng sau 1 lập trình viên thành công là một người bạn gái... <b>không tồn tại</b> .</p>

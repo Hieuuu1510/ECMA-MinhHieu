@@ -92,19 +92,23 @@ nav ul li a:hover {
     margin-left: 40px;
     margin-bottom: 20px;
 }
-.data img {
+.data a {
+    text-decoration: none;
+    color: black;
+}
+.data a img {
     width: 400px;
     margin-left: 50px;
     height: 300px;
     border-radius: 5px;
     margin-bottom: 15px;
 }
-.data h2 {
+.data a h2 {
     margin-left: 50px;
     /* font-weight: bold; */
     font-size: 27px;
 }
-.data p {
+.data a p {
     margin-left: 50px;
     width: 120px;
     border: 1px solid rgb(236, 230, 230);
@@ -112,15 +116,15 @@ nav ul li a:hover {
     border-radius: 8px;
     margin-top: 10px;
 }
-.data span {
+.data a span {
     margin-left: 50px;
     margin-top: 5px;
     margin-bottom: 10px;
 }
-.data span icon {
+.data a span icon {
     margin-bottom: 10px;
 }
-.data p:hover {
+.data a p:hover {
     background-color: thistle;
 }
 .data button {
@@ -154,14 +158,6 @@ footer {
 .logo-footer p b{
 
     color: rgb(133, 94, 24);
-}
-.fb {
-    margin-left: 10px;
-    width: 20px;
-    height: 40px;
-}
-.lienKet {
-    color: 133, 94, 24;
 }
 .text-footer {
     padding-bottom: 10px;

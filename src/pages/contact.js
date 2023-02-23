@@ -1,7 +1,15 @@
 
-import { useEffect } from "../lib";
+import { useEffect, useState } from "../lib";
 import { postContact } from "../api/contact";
+import { getCvs } from "../api/cv";
 const ContactPage = () => {
+
+    const [ cv, setCv] = useState([]);
+    useEffect(() => {
+        getCvs().then(({ data}) => setCv(data))
+                .catch(() => console.log("list link cv thất bại"))
+    }, [])
+
     useEffect(() => {
         const Name = document.getElementById('name');
         const Email = document.getElementById('email');
@@ -19,7 +27,9 @@ const ContactPage = () => {
             postContact(newContact).then(() => alert("gửi thành công"))
                                     .catch(() => alert("Gửi thất bại"))
         })
-    }, []);
+
+        
+    });
     return /*html*/ `
     <!DOCTYPE html>
     <html lang="en">
@@ -55,14 +65,16 @@ const ContactPage = () => {
             </header>
             <div class="banner">
                 <p>Tôi làm Web Developer</p>
-                <span><a target="_blank" href="https://drive.google.com/file/d/15VSx_F663ImKFH1UYHgn8K9_kke0t2RP/view?usp=sharing"><> My resume <></a></span>
-                <img src="././brandy/images/shape.png" alt="">
+                ${cv.map((item) => `
+                    <span><a target="_blank" href="${item.link}"><> My resume <></a></span>
+                `).join("")}
+                <img src="./images/shape.png" alt="">
             </div>
             <div class="contact">
                 <div class="form-contact">
                     <div class="text-contact">
                         <h2>Contact</h2>
-                        <img src="././brandy/images/shape.png" alt="">
+                        <img src="./images/shape.png" alt="">
                     </div>
                     <div class="container">
                         <form id="form-add" class="form-add">
@@ -89,11 +101,6 @@ const ContactPage = () => {
             <footer>
                 <div class="logo-footer">
                     <p>Minh <b>Hiếu</b></p>
-                </div>
-                <div class="lienKet">
-                    <p>FOLLOW ME ON HERE</p>
-                   <a target="_blank" href="https://www.instagram.com/_mink.hyeu/"> <i class="fa-brands fa-instagram ig"></i> </a>
-                   <a target="_blank" href="https://www.facebook.com/profile.php?id=100052403615266">  <i class="fa-brands fa-facebook fb"></i> </a>
                 </div>
                 <div class="text-footer">
                     <p>Đằng sau 1 lập trình viên thành công là một người bạn gái... <b>không tồn tại</b> .</p>

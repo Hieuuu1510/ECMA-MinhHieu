@@ -57,7 +57,10 @@ const adminContactPage = () => {
         <a data-navigo style="text-decoration: none; color: white; padding: 5px;" href="#/admin/projects/">show Project</a>
     </button>
     <button style="border: 1px solid whitesmoke; border-radius: 7px; padding: 5px; background-color: brown;">
-        <a data-navigo style="text-decoration: none; color: white; padding: 5px;" href="#/admin/user/">show User</a>
+        <a data-navigo style="text-decoration: none; color: white; padding: 5px;" href="#/admin/cv/">show Cv</a>
+    </button>
+    <button style="border: 1px solid whitesmoke; border-radius: 7px; padding: 5px; background-color: brown;">
+        <a data-navigo style="text-decoration: none; color: white; padding: 5px;" href="#/admin/profile">show ProFile</a>
     </button>
 </div>`
   )

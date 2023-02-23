@@ -45,3 +45,7 @@ h1 {
 .buttonLogin:hover {
 	background-color: #3e8e41;
 }
+.a-login {
+	text-decoration: none;
+	color: #3e8e41;
+}

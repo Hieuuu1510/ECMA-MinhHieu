@@ -117,7 +117,7 @@ nav ul li a:hover {
     color: #615e5e77;
 }
 .text-profile2 p {
-    width: 400px;
+    width: 500px;
     line-height:30px;
 }
 
@@ -134,15 +134,6 @@ footer {
 .logo-footer p b{
 
     color: rgb(133, 94, 24);
-}
-.fb {
-    margin-left: 10px;
-    width: 20px;
-    height: 40px;
-}
-
-.lienKet {
-    color: 133, 94, 24;
 }
 .text-footer {
     padding-bottom: 10px;

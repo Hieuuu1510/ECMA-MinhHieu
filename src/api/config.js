@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instace = axios.create({
-    baseURL: "https://dj0r17-8080.preview.csb.app/api",
+    baseURL: "http://localhost:3000",
 });
 
 export default instace

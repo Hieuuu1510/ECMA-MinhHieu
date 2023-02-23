@@ -1,12 +1,7 @@
-import { getUsers } from "../../api/user";
+import { Login } from "../../api/auth";
 import { useEffect, router, useState } from "../../lib"
 
-const login = () => {
-    const [users, setUser] = useState([]);
-    useEffect(() => {
-        getUsers().then(({ data}) => setUser(data))
-                    .catch(() => alert("list thất bại")) 
-    }, [])
+const loginn = () => {
     useEffect(() => {
         const username = document.getElementById('username');
         const password = document.getElementById('password');
@@ -14,20 +9,14 @@ const login = () => {
         
         login.addEventListener("submit", (e) => {
             e.preventDefault();
-            // users.map((item) => {
-            //     if(item.email == username.value && item.pass == password.value) {
-            //         alert("Đăng nhập thành công");
-            //     }else {
-            //         alert("mật khẩu hoặc tài khoản không đúng");
-            //     }
-            // })
-            for(const item of users) {
-                if(item.email == username.value && item.pass == password.value) {
-                    router.navigate("/admin/projects");
-                }else {
-                    alert("mật khẩu hoặc tài khoản không đúng");
-                }
+            const user = {
+                email: username.value,
+                pass: password.value,
             }
+
+            Login(user).then(() => router.navigate("/admin/projects"))
+                        .catch(() => alert("Tài khoản hoặc mật khẩu sai"))
+            
         })
     })
   return /*html*/ `
@@ -48,6 +37,7 @@ const login = () => {
               <input class="inputLogin" type="email" id="username" name="username" placeholder="Enter email">
               <label class="label" for="password">Password</label>
               <input class="inputLogin" type="password" id="password" name="password" placeholder="Enter password">
+              <p>Bạn chưa có tài khoản ..<a class="a-login" href="/#admin/signup/">Đăng ký</a></p>
               <button class="buttonLogin" value="Login" id="login">Login</button>
           </form>
       </div>
@@ -56,7 +46,7 @@ const login = () => {
     `
 };
 
-export default login
+export default loginn
 
 
 

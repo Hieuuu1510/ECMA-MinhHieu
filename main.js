@@ -20,12 +20,20 @@ import ProjectsPage from "./src/pages/projects";
 // import contact
 import adminContactPage from "./src/pages/admin/Contact";
 
-// import User
-import login from "./src/pages/admin/login";
-import AdminUser from "./src/pages/admin/list-user";
-import AdminUserAdd from "./src/pages/admin/add-user";
-import AdminUserEdit from "./src/pages/admin/edit-user";
-import add from "./src/pages/add";
+// import admin
+import signupPage from "./src/pages/admin/signupPage";
+import loginn from "./src/pages/admin/login";
+
+
+// import linkCv
+import linkCvAdd from "./src/pages/admin/linkCvAdd";
+import listCv from "./src/pages/admin/listCv";
+import AdmineditCv from "./src/pages/admin/editCv";
+
+// import proFile
+import addProFile from "./src/pages/admin/addProFile";
+import listProFile from "./src/pages/admin/listProFile";
+import editProfile from "./src/pages/admin/editProfile";
 
 const app = document.getElementById('app');
 
@@ -35,7 +43,7 @@ router.on("/contact",() => render(ContactPage,app));
 router.on("/post/:postId",() => render(PostDetailPage, app));
 router.on("/post",() => render(PostsPage,app));
 router.on("/project",() => render(ProjectsPage,app));
-router.on("/project/:projectId",(params) => render(() => ProjectDetailPage(params),app));
+router.on("/project/:projectId",({ data}) => render(() => ProjectDetailPage(data),app));
 
 
 // quản lí dự án
@@ -46,14 +54,23 @@ router.on("/admin/projects/:projectsId/edit", ({ data}) => render(() => AdminPro
 
 // quản lí phản hồi
 router.on("/admin/contact/", () => render(adminContactPage,app));
-router.on("/admin/login/", () => render(login, app))
 
-// quán lí admin
-router.on("/admin/user/", () => render(AdminUser, app))
-router.on("/admin/user/add", () => render(AdminUserAdd, app))
-router.on("/admin/user/:userId/edit", ({ data}) => render(() => AdminUserEdit(data), app));
-// quản lí add
-router.on("/add", () => render(add, app));
+
+// quản lí admin
+router.on("/admin/login/", () => render(loginn, app))
+router.on("/admin/signup/", () => render(signupPage, app));
+
+
+// quản lí proFile
+router.on("/admin/profile/add", () => render(addProFile, app));
+router.on("/admin/profile", () => render(listProFile, app));
+router.on("/admin/profile/:profileId/edit", ({ data}) => render(() => editProfile(data), app))
+
+// quản lí linkCv
+router.on("/admin/cv/add", () => render(linkCvAdd, app));
+router.on("/admin/cv", () => render(listCv, app));
+router.on("/admin/cv/:cvId/edit", ({ data}) =>  render(() => AdmineditCv(data), app));
+
 
 router.notFound(() => render(NotFoundPage, app));
 router.resolve();

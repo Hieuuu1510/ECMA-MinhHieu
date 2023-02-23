@@ -10,14 +10,14 @@ const AdminProjectsPage = () => {
         // .then((hehe) => hehe.json())
         // .then((data) => setData(data))
         // .catch(() => console.log("sai"))
-        getProjects().then(({ data}) => setData(data))
-                    .catch(() => console.log("list thất bại"))
+        getProjects().then(({ data }) => setData(data))
+            .catch(() => console.log("list thất bại"))
 
     }, [])
-    
+
     useEffect(() => {
         const btns = document.querySelectorAll(".btn-remove");
-        for(let btn of btns) {
+        for (let btn of btns) {
             btn.addEventListener("click", () => {
                 let id = btn.dataset.id;
 
@@ -33,13 +33,40 @@ const AdminProjectsPage = () => {
                     let newProject = data.filter((item) => item.id != id);
                     setData(newProject);
                 })
-                                .catch(() => console.log("Xoá không thành công"))
+                    .catch(() => console.log("Xoá không thành công"))
             })
-        }  
+        }
     })
-    
-  return ( /*html*/
-    `<div class="container mt-5">
+
+    return ( /*html*/
+        `
+        <style>
+            .nav-admin {
+                margin-left: 120px;
+                height: 40px;
+                margin-bottom: 30px;
+            }
+            ul {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+            }
+            ul li {
+                padding-top: 10px;
+                list-style: none;
+            
+            }
+            ul li a {
+                color: black;
+                text-decoration: none;
+                font-size: 22px;
+            }
+            ul li a:hover {
+                color: antiquewhite;
+            }
+        </style>
+        
+        <div class="container mt-5">
+        <hr>
         <h1>Quản lý dự án</h1>
         <br>
         <table class="table table-bordered">
@@ -68,7 +95,7 @@ const AdminProjectsPage = () => {
                             </td>
                         </tr>
                 `).join("")
-            }
+        }
                              
             </tbody>
         </table>
@@ -76,13 +103,16 @@ const AdminProjectsPage = () => {
             <a data-navigo style="text-decoration: none; color: white; padding: 5px;" href="#/admin/contact/">show contact</a>
         </button>
         <button style="border: 1px solid whitesmoke; border-radius: 7px; padding: 5px; background-color: brown;">
-            <a data-navigo style="text-decoration: none; color: white; padding: 5px;" href="#/admin/user/">show user</a>
+            <a data-navigo style="text-decoration: none; color: white; padding: 5px;" href="#/admin/cv/">show Cv</a>
+        </button>
+        <button style="border: 1px solid whitesmoke; border-radius: 7px; padding: 5px; background-color: brown;">
+            <a data-navigo style="text-decoration: none; color: white; padding: 5px;" href="#/admin/profile">show ProFile</a>
         </button>
         <button style="border: 1px solid whitesmoke; border-radius: 7px; padding: 5px; background-color: brown;">
             <a data-navigo style="text-decoration: none; color: white; padding: 5px;" href="#/admin/projects/add">Add</a>
         </button>
     </div>`
-  );
+    );
 }
 
 export default AdminProjectsPage
